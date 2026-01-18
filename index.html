@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwani Singh | Data Analyst Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        sky: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glow-border { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.3); }
+        /* Timeline Line */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #0ea5e9, transparent);
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline-line::before { left: 20px; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-white cursor-pointer">
+                AS
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#" class="hover:text-sky-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+                <a href="#certifications" class="hover:text-sky-400 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Btn -->
+            <button class="md:hidden text-white text-xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-slate-950 border-b border-slate-800 p-4 md:hidden flex flex-col space-y-4 shadow-2xl">
+                <a href="#" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">About</a>
+                <a href="#skills" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">Skills</a>
+                <a href="#experience" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">Experience</a>
+                <a href="#projects" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">Projects</a>
+                <a href="#certifications" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">Certifications</a>
+                <a href="#contact" class="block text-gray-300 hover:text-sky-400 font-medium transition-colors">Contact</a>
+            </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative pt-16">
+        <!-- Background decorative elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute top-20 right-10 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-4 z-10">
+            Ashwani <span class="text-sky-500">Singh</span>
+        </h1>
+        <p class="text-2xl md:text-3xl text-gray-300 font-light mb-8 z-10">
+            Data Analyst <span class="text-sky-500">|</span> BI Specialist
+        </p>
+        <p class="max-w-2xl text-gray-400 mb-10 z-10 text-lg">
+            Experienced in SQL, Python, Excel, and Tableau. Transforming raw data into actionable business insights.
+        </p>
+        
+        <div class="flex gap-6 z-10">
+            <a href="https://linkedin.com/in/ashw2910" target="_blank" class="text-3xl text-gray-400 hover:text-sky-500 transition-transform hover:-translate-y-1"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/ashw2910" target="_blank" class="text-3xl text-gray-400 hover:text-white transition-transform hover:-translate-y-1"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:ashwanisingha1122@gmail.com" class="text-3xl text-gray-400 hover:text-red-400 transition-transform hover:-translate-y-1"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <div class="mt-12 z-10">
+            <a href="Ashwani_resume.pdf" target="_blank" class="px-8 py-3 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-lg shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transition-all transform hover:scale-105">
+                Download Resume <i class="fa-solid fa-download ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm <span class="text-sky-400">Ashwani Singh</span></h2>
+                <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                    <p>
+                        I am an aspiring <strong>Data Analyst</strong> with a passion for uncovering hidden trends in complex datasets. 
+                        With a strong foundation in <span class="text-white font-semibold">SQL, Python, and Tableau</span>, I help businesses make data-driven decisions.
+                    </p>
+                    <p>
+                        Currently based in Greater Noida, I have hands-on experience in managing large datasets, creating interactive dashboards, 
+                        and optimizing reporting processes.
+                    </p>
+                </div>
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-sky-500 text-xl"></i>
+                        <span>Greater Noida, UP</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-graduation-cap text-sky-500 text-xl"></i>
+                        <span>B.Sc. Mathematics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-purple-600 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative w-72 h-72 rounded-full bg-slate-800 flex items-center justify-center border-4 border-slate-950 overflow-hidden">
+                    <!-- Profile Image -->
+                    <img src="assets/profile.jpg" alt="Ashwani Singh" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-950 relative">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-16">Skills <span class="text-sky-500">& Tech</span></h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <!-- Skill Cards -->
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-brands fa-python text-5xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">Python</span>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-solid fa-database text-5xl text-blue-400 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">SQL</span>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-solid fa-chart-simple text-5xl text-orange-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">Tableau</span>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-solid fa-chart-column text-5xl text-yellow-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">Power BI</span>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-solid fa-file-excel text-5xl text-green-500 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">Excel</span>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-solid fa-server text-5xl text-sky-600 group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">PostgreSQL</span>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col items-center gap-4 hover:border-sky-500/50 transition-colors group cursor-default">
+                    <i class="fa-brands fa-google text-5xl text-white group-hover:scale-110 transition-transform"></i>
+                    <span class="font-medium">Google Sheets</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Timeline) -->
+    <section id="experience" class="py-24 bg-slate-900 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-16">Work <span class="text-sky-500">Experience</span></h2>
+            
+            <div class="relative timeline-line">
+                <!-- Job 1 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full relative">
+                    <div class="order-1 md:w-5/12 text-left md:text-right px-4">
+                        <h3 class="text-2xl font-bold text-white">MIS Executive</h3>
+                        <p class="text-sky-400 font-medium">SUBADA FINSERVE</p>
+                        <p class="text-sm text-gray-500 mb-4">Sep 2024 – Dec 2025</p>
+                    </div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 border-4 border-slate-900 shadow-xl w-10 h-10 rounded-full justify-center">
+                        <div class="w-3 h-3 bg-sky-500 rounded-full"></div>
+                    </div>
+                    <div class="order-1 md:w-5/12 px-4 mt-6 md:mt-0">
+                        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 transition-all shadow-lg">
+                            <ul class="list-disc ml-4 text-gray-300 space-y-2 text-sm">
+                                <li>Designed interactive dashboards for KPI monitoring, boosting visibility by 20%.</li>
+                                <li>Ensured 100% data accuracy through rigorous validation and cleaning using Advanced Excel.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="mb-12 flex flex-col md:flex-row-reverse items-center justify-between w-full relative">
+                    <div class="order-1 md:w-5/12 text-left md:text-left px-4">
+                        <h3 class="text-2xl font-bold text-white">Data Entry Operator</h3>
+                        <p class="text-sky-400 font-medium">NESU INFOTECH</p>
+                        <p class="text-sm text-gray-500 mb-4">Apr 2022 – Aug 2024</p>
+                    </div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 border-4 border-slate-900 shadow-xl w-10 h-10 rounded-full justify-center">
+                        <div class="w-3 h-3 bg-sky-500 rounded-full"></div>
+                    </div>
+                    <div class="order-1 md:w-5/12 px-4 mt-6 md:mt-0">
+                        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500/50 transition-all shadow-lg">
+                            <ul class="list-disc ml-4 text-gray-300 space-y-2 text-sm">
+                                <li>Managed high-volume data entry for billing systems with high precision.</li>
+                                <li>Reduced financial recording error rates through daily transaction tracking.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-16">Featured <span class="text-sky-500">Projects</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Project Card 1 -->
+                <div class="bg-slate-900 rounded-3xl p-6 border border-slate-800 card-hover group relative overflow-hidden">
+                    <div class="h-48 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative">
+                         <!-- Placeholder Abstract Pattern -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900 opacity-50"></div>
+                        <i class="fa-solid fa-plane-departure text-6xl text-sky-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Air Cargo Analysis</h3>
+                    <p class="text-gray-400 mb-6 h-20 overflow-hidden text-ellipsis">End-to-end dashboard tracking shipment trends and delays. Used SQL and Excel to identify bottlenecks and optimize costs.</p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-1 rounded-full bg-slate-800 text-sky-400 text-sm border border-slate-700">SQL</span>
+                        <span class="px-4 py-1 rounded-full bg-slate-800 text-sky-400 text-sm border border-slate-700">Excel</span>
+                    </div>
+                    
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-center font-bold text-white hover:opacity-90 transition-opacity">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-slate-900 rounded-3xl p-6 border border-slate-800 card-hover group relative overflow-hidden">
+                    <div class="h-48 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-900 to-slate-900 opacity-50"></div>
+                        <i class="fa-solid fa-heart-pulse text-6xl text-purple-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Healthcare Analytics</h3>
+                    <p class="text-gray-400 mb-6 h-20 overflow-hidden text-ellipsis">Predictive analytics for patient readmission risks using demographics. Visualized high-risk segments in Tableau.</p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-1 rounded-full bg-slate-800 text-purple-400 text-sm border border-slate-700">Tableau</span>
+                        <span class="px-4 py-1 rounded-full bg-slate-800 text-purple-400 text-sm border border-slate-700">Excel</span>
+                    </div>
+                    
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-600 text-center font-bold text-white hover:opacity-90 transition-opacity">View Project</a>
+                    </div>
+                </div>
+
+                 <!-- Project Card 3 -->
+                 <div class="bg-slate-900 rounded-3xl p-6 border border-slate-800 card-hover group relative overflow-hidden">
+                    <div class="h-48 bg-slate-800 rounded-2xl mb-6 flex items-center justify-center overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-900 to-slate-900 opacity-50"></div>
+                        <i class="fa-solid fa-chart-line text-6xl text-yellow-500/50 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Sales Analysis</h3>
+                    <p class="text-gray-400 mb-6 h-20 overflow-hidden text-ellipsis">Python-based solution evaluating sales performance across regions. Generated insights on trends using Pandas.</p>
+                    <div class="flex gap-4">
+                        <span class="px-4 py-1 rounded-full bg-slate-800 text-yellow-400 text-sm border border-slate-700">Python</span>
+                        <span class="px-4 py-1 rounded-full bg-slate-800 text-yellow-400 text-sm border border-slate-700">Pandas</span>
+                    </div>
+                    
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="flex-1 py-3 rounded-xl bg-gradient-to-r from-yellow-500 to-orange-600 text-center font-bold text-white hover:opacity-90 transition-opacity">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-24 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-16">Courses & <span class="text-sky-500">Certifications</span></h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-sky-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-certificate text-sky-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Data Analytics & Gen AI</h3>
+                    <p class="text-sm text-gray-500">IIT Kanpur</p>
+                    <a href="https://certificates.simplicdn.net/share/9613902_8147421_1766560965109.pdf" target="_blank" class="text-sky-400 text-sm font-semibold mt-4 inline-block hover:underline">View Certificate -></a>
+                </div>
+                <!-- Cert 2 -->
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-sky-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-certificate text-sky-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Business Analytics</h3>
+                    <p class="text-sm text-gray-500">Simplilearn</p>
+                    <a href="https://certificates.simplicdn.net/share/8215235_81474211745056234526.pdf" target="_blank" class="text-sky-400 text-sm font-semibold mt-4 inline-block hover:underline">View Certificate -></a>
+                </div>
+                 <!-- Cert 3 -->
+                 <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-sky-500/50 transition-colors">
+                    <div class="w-12 h-12 bg-sky-500/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-certificate text-sky-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">SQL Certification</h3>
+                    <p class="text-sm text-gray-500">Simplilearn</p>
+                    <a href="https://certificates.simplicdn.net/share/8399181_81474211748436438216.pdf" target="_blank" class="text-sky-400 text-sm font-semibold mt-4 inline-block hover:underline">View Certificate -></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-12 bg-slate-950 text-center border-t border-slate-900">
+        <h3 class="text-2xl font-bold mb-6">Let's Connect</h3>
+        <div class="flex justify-center gap-6 mb-8">
+            <a href="https://linkedin.com/in/ashw2910" class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-sky-500 transition-all">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://github.com/ashw2910" class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-sky-500 transition-all">
+                <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a href="mailto:ashwanisingha1122@gmail.com" class="w-12 h-12 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-sky-500 transition-all">
+                <i class="fa-solid fa-envelope text-xl"></i>
+            </a>
+        </div>
+        <p class="text-gray-600 text-sm">Made with <i class="fa-solid fa-heart text-red-500 mx-1"></i> by Ashwani Singh</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
